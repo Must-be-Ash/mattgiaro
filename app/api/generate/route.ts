@@ -1,11 +1,21 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
+export const fetchCache = 'force-no-store';
+export const preferredRegion = 'auto';
+
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function POST(req: Request) {
+  if (req.method !== 'POST') {
+    return NextResponse.json(
+      { error: 'Method not allowed' },
+      { status: 405 }
+    );
+  }
+
   try {
     const { topic, context } = await req.json();
 

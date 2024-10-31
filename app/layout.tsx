@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Newsletter Name Generator',
   description: 'Generate creative and professional newsletter names with AI',
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
