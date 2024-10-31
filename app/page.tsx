@@ -95,8 +95,8 @@ export default function Component() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               )}
             >
-              Transform Your Ideas Into
-              <span className="block text-orange-500 mt-2">Newsletter Names</span>
+              Craft the Perfect <br />
+              Newsletter Name<span className="block text-orange-500 mt-2">in Seconds</span>
             </h1>
             <p 
               className={cn(
